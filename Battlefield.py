@@ -1,5 +1,5 @@
-import Robot
-import Dinosaur
+from Robot import Robot
+from Dinosaur import Dinosaur
 
 
 class Battlefield:
@@ -8,7 +8,7 @@ class Battlefield:
      self.robot = Robot('buzz')
      self.dinosaur = Dinosaur('mel', 20)
 
-    def Run_game(self):
+    def run_game(self):
         self.display_welcome()
         self.battle_phase()
         self.display_winner()
@@ -23,7 +23,7 @@ class Battlefield:
             self.dinosaur.attack(self.robot)
         
 
-    def display_winner():
+    def display_winner(self):
         if Robot.health <= 0:
             print(' The winner is {self.Dinosaur_name}')
 
