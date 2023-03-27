@@ -20,7 +20,11 @@ class Battlefield:
     def battle_phase(self):
         while self.robot.health > 0 and self.dinosaur.health > 0:
             self.robot.attack(self.dinosaur)
+            if self.dinosaur.health <= 0:
+                break
             self.dinosaur.attack(self.robot)
+            if self.robot.health <= 0:
+                break
         
 
     def display_winner(self):
