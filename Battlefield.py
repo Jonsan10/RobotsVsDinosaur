@@ -18,12 +18,12 @@ class Battlefield:
         print('Welcome to Robots vs Dinosaur')
 
     def battle_phase(self):
-        while self.robot.health > 0 and self.dinosaur.health > 0:
-            self.robot.attack(self.dinosaur)
-            if self.dinosaur.health <= 0:
+        while Robot.health > 0 and Dinosaur.health > 0:
+            Robot.attack(Dinosaur)
+            if Dinosaur.health <= 0:
                 break
-            self.dinosaur.attack(self.robot)
-            if self.robot.health <= 0:
+            Dinosaur.attack(Robot)
+            if Robot.health <= 0:
                 break
         
 
