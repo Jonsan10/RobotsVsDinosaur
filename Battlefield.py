@@ -1,5 +1,5 @@
-from Robot import Robot
-from Dinosaur import Dinosaur
+from robot import Robot
+from dinosaur import Dinosaur
 
 
 class Battlefield:
@@ -18,13 +18,12 @@ class Battlefield:
         print('Welcome to Robots vs Dinosaur')
 
     def battle_phase(self):
-        while Robot.health > 0 and Dinosaur.health > 0:
-            Robot.attack(Dinosaur)
-            if Dinosaur.health <= 0:
-                break
-            Dinosaur.attack(Robot)
-            if Robot.health <= 0:
-                break
+        self.robot.choose_weapon()
+        while self.robot.health > 0 and self.dinosaur.health > 0:
+                self.dinosaur.attack(self.robot)
+                self.robot.attack(self.dinosaur)
+                if self.robot.health <= 0 or self.dinosaur.health <= 0:
+                    break
         
 
     def display_winner(self):
