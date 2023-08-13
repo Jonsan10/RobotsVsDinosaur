@@ -1,6 +1,7 @@
 
 from Battlefield import Battlefield
 
-game = Battlefield()
-game.run_game()
 
+# Example usage
+battlefield = Battlefield()
+battlefield.run_game()
